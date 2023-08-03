@@ -29,7 +29,7 @@ export const OneCard:React.FC <OneCardProps> = ({id,title,picture,price}) => {
     }
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card bg={"light"} style={{ width: '18rem', boxShadow: '4px 4px 10px black' }} text={'white'}>
             <Card.Img  style={{ height: '10rem' }} variant="top" src={picture} className="bg-secondary"/>
             <Card.Body>
                 <Card.Title>{t("brand")} {title}</Card.Title>

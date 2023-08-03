@@ -25,13 +25,13 @@ export const BasketCard:React.FC <BasketCardProps> = ({index,id,title,price}) =>
     }
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card bg={"secondary"} text={'white'} style={{ width: '18rem',marginBottom:'10px' }}>
             <Card.Body>
                 <Card.Title> {title}</Card.Title>
                 <Card.Text>
                  {price} $
                 </Card.Text>
-                <Button onClick={()=>deleteFromBasket(index)} variant="secondary">{t("delete")}</Button>
+                <Button variant="dark" onClick={()=>deleteFromBasket(index)}>{t("delete")}</Button>
             </Card.Body>
         </Card>
     );
