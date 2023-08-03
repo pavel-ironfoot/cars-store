@@ -1,0 +1,15 @@
+{
+    "language":"en",
+    "header":"Car Store",
+    "home":"Home",
+    "search":"Search",
+    "price":"price:",
+    "brand":"brand:",
+    "addto":"Add to Basket",
+    "basket":"Basket",
+    "amount":"Amount",
+    "isempty":"basket is empty",
+    "totalprice":"Total Price:",
+    "deleteall":"Delete All Cars",
+    "delete":"Delete from Basket"
+}
