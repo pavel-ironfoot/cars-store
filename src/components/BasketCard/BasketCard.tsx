@@ -1,19 +1,15 @@
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from 'react-i18next';
-import './BasketCard.scss';
 import { deleteCurrentCard } from '../../store/cardsSlice';
 import { RootState } from '../../store';
+import { BasketCardProps } from '../../common/types-and-interfaces';
 
-interface BasketCardProps {
-    index:number;
-    id:number;
-    title:string;
-    price:number;
-}
+import './BasketCard.scss';
 
-export const BasketCard:React.FC <BasketCardProps> = ({index,id,title,price}) => {
+
+export const BasketCard: React.FC<BasketCardProps> = ({ index, id, title, price }) => {
     const basketCards = useSelector((state: RootState) => state.allCards.cards);
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch();
@@ -25,13 +21,13 @@ export const BasketCard:React.FC <BasketCardProps> = ({index,id,title,price}) =>
     }
 
     return (
-        <Card bg={"secondary"} text={'white'} style={{ width: '18rem',marginBottom:'10px' }}>
+        <Card bg={"secondary"} text={'white'} style={{ width: '18rem', marginBottom: '10px' }}>
             <Card.Body>
                 <Card.Title> {title}</Card.Title>
                 <Card.Text>
-                 {price} $
+                    {price} $
                 </Card.Text>
-                <Button variant="dark" onClick={()=>deleteFromBasket(index)}>{t("delete")}</Button>
+                <Button variant="dark" onClick={() => deleteFromBasket(index)}>{t("delete")}</Button>
             </Card.Body>
         </Card>
     );

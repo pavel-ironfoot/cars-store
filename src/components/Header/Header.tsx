@@ -11,18 +11,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ModalBasket } from '../ModalBasket';
 import { searchInCards } from '../../common/helpfulFunction';
 import { RootState } from '../../store';
+import { updateSearchCars } from '../../store/cardsSlice';
 
 import './Header.scss';
-import { updateSearchCars } from '../../store/cardsSlice';
 
 export const Header = () => {
     const cars = useSelector((state: RootState) => state.allCards.cars);
     const dispatch = useDispatch();
-    const [searchValue,setSearchValue] = useState();
+    const [searchValue, setSearchValue] = useState();
 
-    const handleChange = (e:any) =>{
+    const handleChange = (e: any) => {
         setSearchValue(e.target.value);
-        const newCars = searchInCards(e.target.value,cars);
+        const newCars = searchInCards(e.target.value, cars);
         dispatch(updateSearchCars(newCars));
     }
 
@@ -30,7 +30,7 @@ export const Header = () => {
     const [show, setShow] = useState<boolean>(false);
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar fixed='top' expand="lg" className="bg-body-tertiary">
             <Container fluid>
                 <Navbar.Brand href="#">{t("header")}</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -46,7 +46,7 @@ export const Header = () => {
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
-                        onChange={handleChange}
+                            onChange={handleChange}
                             type="search"
                             placeholder={t("search")}
                             className="me-2"
@@ -56,7 +56,7 @@ export const Header = () => {
                         <Button variant="secondary">{t("search")}</Button>
                     </Form>
                 </Navbar.Collapse>
-                <BasketIcon setShow={setShow}/>
+                <BasketIcon setShow={setShow} />
             </Container>
 
             <ModalBasket

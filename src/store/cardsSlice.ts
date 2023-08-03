@@ -35,4 +35,4 @@ const cardsSlice = createSlice({
 });
 
 export default cardsSlice.reducer;
-export const { addCard, deleteCurrentCard, updateCars, deleteAllCars,updateSearchCars } = cardsSlice.actions;
+export const { addCard, deleteCurrentCard, updateCars, deleteAllCars, updateSearchCars } = cardsSlice.actions;
