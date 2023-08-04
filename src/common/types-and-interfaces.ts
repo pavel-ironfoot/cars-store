@@ -20,3 +20,7 @@ export interface OneCardProps {
     price:number,
     id:number,
 }
+
+export interface DropDownMenuProps{
+    setTest:(value:boolean)=>void;
+}

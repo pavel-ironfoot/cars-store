@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from 'react-bootstrap';
+import { DropDownMenuProps } from '../../common/types-and-interfaces';
 
-interface DropDownMenuProps{
-  setTest:(value:boolean)=>void;
-}
 export const DropDownMenu:React.FC<DropDownMenuProps> = ({setTest}) => {
   const [selectedOption, setSelectedOption] = useState<string>(() => {
     const storedOption = localStorage.getItem('carsLanguage');

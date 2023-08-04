@@ -88,5 +88,59 @@ export const itemsArray = [
         title: 'BMW m3 touring',
         price: 48000,
         picture: 'https://cdn.motor1.com/images/mgl/P33NqL/s3/2022-bmw-m3-touring.jpg',
+    },
+    {
+        id: 16,
+        title: 'Horse Scadufax',
+        price: 70000,
+        picture: 'https://i.pinimg.com/originals/15/64/20/156420ffa6492d4f907b632be7c0201b.jpg',
+    },
+    {
+        id: 17,
+        title: 'Dragon the Drogo',
+        price: 6000000,
+        picture: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/01/game-of-thrones-dragon-drogon.jpg',
+    },
+    {
+        id: 18,
+        title: 'Harley-Davidson The Puncher',
+        price: 27000,
+        picture: 'https://ricks-motorcycles.com/wp-content/uploads/2020/05/Harley-Davidson-Fat-Boy-Screamin-Eagle-Custom-Ricks-001-1024x683.jpg',
+    },
+    {
+        id: 19,
+        title: 'Fuel tank',
+        price: 15375,
+        picture: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iC1wdECjenmw/v2/-1x-1.jpg',
+    },
+    {
+        id: 20,
+        title: 'Ferrari LaFerrari',
+        price: 3000100,
+        picture: 'https://images.successstory.com/adminimg/image_uploads/content_images/beauty-in-red_1458648116.jpg',
+    },
+    {
+        id:21,
+        title:'Talking Dankey',
+        price: 4500,
+        picture: 'https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/03/donkey-shrek.jpeg',
+    },
+    {
+        id: 22,
+        title: 'Enterprise starship',
+        price: 15000200100,
+        picture: 'https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/06/STC_Enterprise-Cropped.jpg',
+    },
+    {
+        id:23,
+        title:'Toyota supra 1994',
+        price:130000,
+        picture:'https://hips.hearstapps.com/hmg-prod/images/t14-1621539537.jpeg',
+    },
+    {
+        id:24,
+        title:'Mini bike',
+        price: 340,
+        picture:'https://www.revzilla.com/blog_content_image/image/76742/CTXP-Dumb-and-Dumber-hog-beauty.jpg',
     }
 ];
