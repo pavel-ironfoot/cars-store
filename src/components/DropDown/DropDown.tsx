@@ -5,7 +5,7 @@ import { Dropdown } from 'react-bootstrap';
 export const DropDownMenu = () => {
   const [selectedOption, setSelectedOption] = useState<string>(() => {
     const storedOption = localStorage.getItem('carsLanguage');
-    return storedOption || 'ua';
+    return storedOption || 'en';
   });
 
   const { t, i18n } = useTranslation();
