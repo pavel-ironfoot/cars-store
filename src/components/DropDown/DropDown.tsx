@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from 'react-bootstrap';
 
-export const DropDownMenu = () => {
+interface DropDownMenuProps {
+  setLanguage:(value:string)=>void;
+}
+export const DropDownMenu:React.FC<DropDownMenuProps> = ({setLanguage}) => {
   const [selectedOption, setSelectedOption] = useState<string>(() => {
     const storedOption = localStorage.getItem('carsLanguage');
     return storedOption || 'en';
@@ -18,6 +21,8 @@ export const DropDownMenu = () => {
 
   useEffect(() => {
     i18n.changeLanguage(selectedOption);
+    setLanguage(selectedOption)
+    console.log('use effect useeeeeeeeeeeeee');
   }, [selectedOption, i18n]);
 
   return (

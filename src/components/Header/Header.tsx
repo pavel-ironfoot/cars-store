@@ -15,7 +15,11 @@ import { updateSearchCars } from '../../store/cardsSlice';
 
 import './Header.scss';
 
-export const Header = () => {
+interface HeaderProps {
+    setLanguage:(value:string)=>void;
+}
+
+export const Header:React.FC<HeaderProps> = ({setLanguage}) => {
     const cars = useSelector((state: RootState) => state.allCards.cars);
     const dispatch = useDispatch();
     const [searchValue, setSearchValue] = useState();
@@ -42,7 +46,7 @@ export const Header = () => {
                     >
                         <Nav.Link href="/">{t("home")}</Nav.Link>
 
-                        <DropDownMenu />
+                        <DropDownMenu setLanguage={setLanguage}/>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
