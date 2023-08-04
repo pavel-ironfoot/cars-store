@@ -19,6 +19,7 @@ export const Header = () => {
     const cars = useSelector((state: RootState) => state.allCards.cars);
     const dispatch = useDispatch();
     const [searchValue, setSearchValue] = useState();
+    const [test,setTest] = useState(false)
 
     const handleChange = (e: any) => {
         setSearchValue(e.target.value);
@@ -42,7 +43,7 @@ export const Header = () => {
                     >
                         <Nav.Link href="/">{t("home")}</Nav.Link>
 
-                        <DropDownMenu />
+                        <DropDownMenu setTest={setTest}/>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control
